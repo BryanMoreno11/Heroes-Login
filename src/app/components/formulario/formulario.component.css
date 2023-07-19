@@ -1,0 +1,39 @@
+form {
+    margin: 0 auto;
+    background-color: rgb(235, 225, 234);
+    width: 50%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 5px;
+}
+
+form>h2 {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(10, 10, 129);
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+form div input,
+form div textarea,
+form div select {
+    flex-grow: 1;
+}
+
+form button {
+    margin: 0 auto;
+}

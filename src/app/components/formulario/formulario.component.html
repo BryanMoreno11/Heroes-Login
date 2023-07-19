@@ -1,0 +1,32 @@
+<form>
+    <h2>Ingresar un nuevo heroe</h2>
+    <section>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre">
+        </div>
+        <div>
+            <label for="anio">Año:</label>
+            <input id="anio" type="date" [(ngModel)]="anio" name="anio">
+        </div>
+        <div>
+            <label for="bio">Bio:</label>
+            <textarea cols="50" rows="10" id="bio" placeholder="Escriba la biografia" name="bio" [(ngModel)]="bio"></textarea>
+        </div>
+        <div>
+            <label for="casa">Casa:</label>
+            <select [(ngModel)]="casa" name="casa">
+                    <option value = "" name = "casa"></option>
+                    <option value = "DC" name = "casa">DC</option>
+                    <option value = "Marvel" name = "casa">Marvel</option>
+                </select>
+        </div>
+        <div>
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" nombre="imagen" (change)="onFileSelected($event)">
+        </div>
+
+        <button (click)="insertHeroe(nombre,anio,bio,casa,imagen)">Guardar</button>
+
+    </section>
+</form>
